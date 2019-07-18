@@ -5,7 +5,7 @@ defmodule Reddit.MixProject do
     [
       app: :reddit,
       version: "0.1.0",
-      elixir: "~> 1.5",
+      elixir: "~> 1.8.1",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
@@ -33,7 +33,8 @@ defmodule Reddit.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.4.9"},
+      # avoid the Phoenix.Controller log config bug
+      {:phoenix, "1.4.6"},
       {:phoenix_pubsub, "~> 1.1"},
       {:phoenix_ecto, "~> 4.0"},
       {:ecto_sql, "~> 3.1"},
