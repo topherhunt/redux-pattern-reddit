@@ -1,20 +1,22 @@
-# Reddit
+# Proof-of-concept pattern for Redux actions & reducers
 
-To start your Phoenix server:
+I recently learned how to incorporate Redux and Redux-Thunk into a React app. But I dislike some of the patterns & conventions modelled by the [official Redux guide](https://redux.js.org/advanced/async-actions).
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Install Node.js dependencies with `cd assets && npm install`
-  * Start Phoenix endpoint with `mix phx.server`
+After some fussing, renaming things, and adopting certain constraints, I've found a Redux pattern that I think I'll be happy with. This app demonstrates that pattern.
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+Relevantest files are in `assets/js/react/` and `assets/js/redux`.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+See also:
 
-## Learn more
+  * https://github.com/topherhunt/cheatsheets/blob/master/js/redux.md
+  * https://github.com/topherhunt/cheatsheets/blob/master/_howto/phoenix_react_redux/phoenix_react_redux.md
 
-  * Official website: http://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+
+## Running it
+
+  * Ensure you have Elixir installed (see mix.exs for the right version; see https://github.com/topherhunt/cheatsheets/blob/master/elixir/elixir_syntax.md#installing-elixir-on-osx for tips on installing Elixir)
+  * `mix deps.get`
+  * `npm i --prefix assets`
+  * `mix phx.server`
+  * Go to http://localhost:4000
+  * You should see a Reddit feed with the "reactjs" sub selected and autoloaded.
